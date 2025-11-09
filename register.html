@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS 3D Gaming Register</title>
+    <meta name="description" content="Create Your NEXUS Gaming Account with Advanced 3D Interface">
+    <meta name="theme-color" content="#00ffff">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMwMDBmZmYiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmYiPgo8cGF0aCBkPSJNNy43NSA5SDIuMjVMMTAgMloiLz4KPHN2ZyB4PSIxNiIgeT0iNyIgd2lkdGg9IjciIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDEwIDIiIGZpbGw9IiNmZjAwZmYiPgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMiIvPgo8L3N2Zz4KPHN2ZyB4PSIxNiIgeT0iMTUiIHdpZHRoPSI3IiBoZWlnaHQ9IjIiIHZpZXdCb3g9IjAgMCAxMCAyIiBmaWxsPSIjZmYwMGZmIj4KPHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIiLz4KPC9zdmc+CjxyZWN0IHg9IjgiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iNCIgZmlsbD0iIzgwODA4MCIvPgo8L3N2Zz4KPC9zdmc+">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main 3D Scene Container -->
+    <div class="nexus-3d-scene" id="nexus3d">
+        
+        <!-- Starfield Background -->
+        <div class="starfield-3d">
+            <div class="stars-near"></div>
+            <div class="stars-mid"></div>
+            <div class="stars-far"></div>
+            <div class="nebula-glow"></div>
+        </div>
+        
+        <!-- 3D Space Environment -->
+        <div class="space-environment-3d">
+            <div class="planet-earth-3d">
+                <div class="earth-surface"></div>
+                <div class="earth-atmosphere"></div>
+                <div class="earth-clouds"></div>
+            </div>
+            <div class="space-debris"></div>
+        </div>
+        
+        <!-- 3D Rocket with True Depth -->
+        <div class="rocket-3d-container" id="rocket3dContainer">
+            <div class="rocket-3d" id="rocket3d">
+                <div class="rocket-hull">
+                    <div class="hull-main"></div>
+                    <div class="hull-nose-cone"></div>
+                    <div class="hull-windows">
+                        <div class="window main-window"></div>
+                        <div class="window side-window"></div>
+                    </div>
+                </div>
+                <div class="rocket-wings">
+                    <div class="wing wing-left"></div>
+                    <div class="wing wing-right"></div>
+                    <div class="wing wing-bottom"></div>
+                </div>
+                <div class="rocket-thrusters">
+                    <div class="thruster thruster-main">
+                        <div class="flame flame-blue"></div>
+                        <div class="flame flame-orange"></div>
+                        <div class="flame flame-white"></div>
+                    </div>
+                </div>
+                <div class="rocket-details">
+                    <div class="detail detail-antenna">
+                        <div class="antenna-rod"></div>
+                        <div class="antenna-dish"></div>
+                    </div>
+                    <div class="detail detail-solar-panel">
+                        <div class="panel panel-left"></div>
+                        <div class="panel panel-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Robot Head Logo (Header) -->
+        <div class="nexus-logo-3d" id="nexusLogo3d">
+            <div class="robot-head-container">
+                <!-- Robot Head Structure -->
+                <div class="robot-head-3d">
+                    <div class="head-shell">
+                        <div class="head-front"></div>
+                        <div class="head-back"></div>
+                        <div class="head-sides">
+                            <div class="side side-left"></div>
+                            <div class="side side-right"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Eyes -->
+                    <div class="robot-eyes">
+                        <div class="eye eye-left" id="robotEyeLeft">
+                            <div class="eye-outer"></div>
+                            <div class="eye-inner"></div>
+                            <div class="eye-pupil" id="leftPupil"></div>
+                            <div class="eye-glint"></div>
+                        </div>
+                        <div class="eye eye-right" id="robotEyeRight">
+                            <div class="eye-outer"></div>
+                            <div class="eye-inner"></div>
+                            <div class="eye-pupil" id="rightPupil"></div>
+                            <div class="eye-glint"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Face Elements -->
+                    <div class="face-elements">
+                        <div class="nose-sensor"></div>
+                        <div class="mouth-speaker">
+                            <div class="speaker-grille"></div>
+                        </div>
+                        <div class="cheek-vents">
+                            <div class="vent vent-left"></div>
+                            <div class="vent vent-right"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Antennas -->
+                    <div class="robot-antennas">
+                        <div class="antenna antenna-left">
+                            <div class="antenna-base"></div>
+                            <div class="antenna-rod"></div>
+                            <div class="antenna-tip"></div>
+                        </div>
+                        <div class="antenna antenna-right">
+                            <div class="antenna-base"></div>
+                            <div class="antenna-rod"></div>
+                            <div class="antenna-tip"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3D Login Paper Interface -->
+        <div class="login-paper-3d-container" id="loginPaper3d">
+            <div class="paper-physics-wrapper">
+                <div class="paper-face paper-front">
+                    <div class="paper-surface">
+                        
+                        <!-- Register Interface -->
+                        <div class="register-interface-3d" id="registerInterface">
+                            
+                            <!-- Header -->
+                            <div class="interface-header-3d">
+                                <h1 class="nexus-title-3d">
+                                    <span class="title-main">CREATE ACCOUNT</span>
+                                    <span class="title-subtitle">Join the NEXUS Gaming Universe</span>
+                                </h1>
+                            </div>
+
+                            <!-- Progress Indicator -->
+                            <div class="progress-indicator-3d">
+                                <div class="progress-step active" data-step="1">
+                                    <div class="step-circle">1</div>
+                                    <span class="step-label">Profile</span>
+                                </div>
+                                <div class="progress-step" data-step="2">
+                                    <div class="step-circle">2</div>
+                                    <span class="step-label">Security</span>
+                                </div>
+                                <div class="progress-step" data-step="3">
+                                    <div class="step-circle">3</div>
+                                    <span class="step-label">Complete</span>
+                                </div>
+                            </div>
+
+                            <!-- Step 1: Profile Information -->
+                            <div class="register-step" id="step1" data-step="1">
+                                <div class="form-field-3d">
+                                    <label for="registerFirstName" class="field-label-3d">
+                                        <i class="fas fa-user"></i>
+                                        <span>First Name</span>
+                                    </label>
+                                    <div class="field-container">
+                                        <input type="text" id="registerFirstName" name="firstName" required 
+                                               class="nexus-input-3d" placeholder="Enter your first name">
+                                        <div class="field-hologram"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field-3d">
+                                    <label for="registerLastName" class="field-label-3d">
+                                        <i class="fas fa-user"></i>
+                                        <span>Last Name</span>
+                                    </label>
+                                    <div class="field-container">
+                                        <input type="text" id="registerLastName" name="lastName" required 
+                                               class="nexus-input-3d" placeholder="Enter your last name">
+                                        <div class="field-hologram"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field-3d">
+                                    <label for="registerEmail" class="field-label-3d">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>Email Address</span>
+                                    </label>
+                                    <div class="field-container">
+                                        <input type="email" id="registerEmail" name="email" required 
+                                               class="nexus-input-3d" placeholder="your.email@nexus.com">
+                                        <div class="field-hologram"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field-3d">
+                                    <label for="registerUsername" class="field-label-3d">
+                                        <i class="fas fa-gamepad"></i>
+                                        <span>Gaming Username</span>
+                                    </label>
+                                    <div class="field-container">
+                                        <input type="text" id="registerUsername" name="username" required 
+                                               class="nexus-input-3d" placeholder="Choose your gaming handle">
+                                        <div class="field-hologram"></div>
+                                        <div class="username-checker" id="usernameChecker">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Username available!</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step 2: Security -->
+                            <div class="register-step hidden" id="step2" data-step="2">
+                                <div class="form-field-3d">
+                                    <label for="registerPassword" class="field-label-3d">
+                                        <i class="fas fa-lock"></i>
+                                        <span>Password</span>
+                                    </label>
+                                    <div class="field-container">
+                                        <input type="password" id="registerPassword" name="password" required 
+                                               class="nexus-input-3d" placeholder="Create a strong password">
+                                        <button type="button" class="password-toggle" id="registerPasswordToggle">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <div class="field-hologram"></div>
+                                    </div>
+                                    <div class="password-strength" id="passwordStrength">
+                                        <div class="strength-bar">
+                                            <div class="strength-fill"></div>
+                                        </div>
+                                        <div class="strength-text">Password strength: <span>Weak</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field-3d">
+                                    <label for="registerConfirmPassword" class="field-label-3d">
+                                        <i class="fas fa-lock-open"></i>
+                                        <span>Confirm Password</span>
+                                    </label>
+                                    <div class="field-container">
+                                        <input type="password" id="registerConfirmPassword" name="confirmPassword" required 
+                                               class="nexus-input-3d" placeholder="Confirm your password">
+                                        <div class="field-hologram"></div>
+                                        <div class="password-match" id="passwordMatch">
+                                            <i class="fas fa-check-circle"></i>
+                                            <span>Passwords match!</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field-3d">
+                                    <label for="registerBirthdate" class="field-label-3d">
+                                        <i class="fas fa-calendar"></i>
+                                        <span>Date of Birth</span>
+                                    </label>
+                                    <div class="field-container">
+                                        <input type="date" id="registerBirthdate" name="birthdate" required 
+                                               class="nexus-input-3d">
+                                        <div class="field-hologram"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-field-3d checkbox-field">
+                                    <label class="checkbox-label-3d">
+                                        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                        <div class="custom-checkbox">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <span>I agree to the <a href="#" class="nexus-link">Terms of Service</a> and <a href="#" class="nexus-link">Privacy Policy</a></span>
+                                    </label>
+                                </div>
+
+                                <div class="form-field-3d checkbox-field">
+                                    <label class="checkbox-label-3d">
+                                        <input type="checkbox" id="newsletter" name="newsletter">
+                                        <div class="custom-checkbox">
+                                            <i class="fas fa-check"></i>
+                                        </div>
+                                        <span>Subscribe to NEXUS gaming news and updates</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Step 3: Completion -->
+                            <div class="register-step hidden" id="step3" data-step="3">
+                                <div class="completion-animation">
+                                    <div class="success-icon">
+                                        <i class="fas fa-rocket"></i>
+                                    </div>
+                                    <h2 class="completion-title">Welcome to NEXUS!</h2>
+                                    <p class="completion-message">Your gaming account has been created successfully. Prepare for an epic journey through the stars!</p>
+                                    
+                                    <div class="account-summary">
+                                        <div class="summary-item">
+                                            <i class="fas fa-user"></i>
+                                            <span id="summaryName"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span id="summaryEmail"></span>
+                                        </div>
+                                        <div class="summary-item">
+                                            <i class="fas fa-gamepad"></i>
+                                            <span id="summaryUsername"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Navigation Buttons -->
+                            <div class="action-buttons-3d">
+                                <button type="button" class="nexus-button-3d secondary-button hidden" id="prevStepBtn">
+                                    <div class="button-surface">
+                                        <div class="button-text">
+                                            <i class="fas fa-arrow-left"></i>
+                                            <span>Previous</span>
+                                        </div>
+                                    </div>
+                                    <div class="button-hologram"></div>
+                                    <div class="button-glow-effect"></div>
+                                </button>
+
+                                <button type="button" class="nexus-button-3d primary-button" id="nextStepBtn">
+                                    <div class="button-surface">
+                                        <div class="button-text">
+                                            <span>Next Step</span>
+                                            <i class="fas fa-arrow-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="button-hologram"></div>
+                                    <div class="button-glow-effect"></div>
+                                </button>
+
+                                <button type="submit" class="nexus-button-3d primary-button hidden" id="registerSubmitBtn">
+                                    <div class="button-surface">
+                                        <div class="button-text">
+                                            <i class="fas fa-rocket"></i>
+                                            <span>Create Account</span>
+                                        </div>
+                                    </div>
+                                    <div class="button-hologram"></div>
+                                    <div class="button-glow-effect"></div>
+                                </button>
+
+                                <a href="index.html" class="nexus-button-3d secondary-button hidden" id="loginRedirectBtn">
+                                    <div class="button-surface">
+                                        <div class="button-text">
+                                            <i class="fas fa-sign-in-alt"></i>
+                                            <span>Login to Account</span>
+                                        </div>
+                                    </div>
+                                    <div class="button-hologram"></div>
+                                    <div class="button-glow-effect"></div>
+                                </a>
+                            </div>
+
+                            <!-- Back to Login -->
+                            <div class="register-footer">
+                                <p class="register-login-link">
+                                    Already have an account? 
+                                    <a href="index.html" class="nexus-link">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        Login here
+                                    </a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="paper-face paper-back">
+                    <div class="paper-surface">
+                        <div class="back-pattern"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Particle Effects -->
+        <div class="particle-effects-3d">
+            <div class="energy-particles"></div>
+            <div class="cosmic-dust"></div>
+        </div>
+    </div>
+
+    <script src="register-script.js"></script>
+    <script>
+        // Initialize Robot Assistant for Register page
+        const robotAssistant = new RobotAssistant();
+        robotAssistant.initialize();
+        
+        // Register page specific voice messages
+        robotAssistant.welcomeMessages = [
+            "Welcome to NEXUS registration, future space commander!",
+            "Ready to create your galactic gaming account?",
+            "Let's set up your profile for the ultimate space adventure!",
+            "Prepare for account creation in the NEXUS universe!"
+        ];
+    </script>
+</body>
+</html>

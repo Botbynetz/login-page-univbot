@@ -1,0 +1,49 @@
+{
+  "name": "NEXUS 3D Gaming Login System",
+  "short_name": "NEXUS",
+  "description": "Advanced 3D Gaming Authentication System with Robot Assistant, Multi-page Registration, and Space Environment",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#00ffff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAYAAADnRuK4AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIkSURBVHic7doxAQAACMOwgX/PFwJGOISQJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSpD/kBcMgSUrmAg==",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/icon-144x144.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["games", "entertainment", "productivity"],
+  "lang": "en",
+  "scope": "./",
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "assets/images/screenshot-desktop.jpg",
+      "type": "image/jpeg",
+      "sizes": "1280x720",
+      "form_factor": "wide"
+    },
+    {
+      "src": "assets/images/screenshot-mobile.jpg", 
+      "type": "image/jpeg",
+      "sizes": "750x1334",
+      "form_factor": "narrow"
+    }
+  ],
+  "features": [
+    "3D animations",
+    "Robot assistant",
+    "Voice synthesis", 
+    "Multi-step registration",
+    "Password recovery",
+    "Space environment"
+  ]
+}

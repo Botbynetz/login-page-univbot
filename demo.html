@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS 3D Gaming Login - Demo & Features</title>
+    <meta name="description" content="Comprehensive demo and feature showcase of NEXUS 3D Gaming Login System">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMwMDBmZmYiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmYiPgo8cGF0aCBkPSJNNy43NSA5SDIuMjVMMTAgMloiLz4KPHN2ZyB4PSIxNiIgeT0iNyIgd2lkdGg9IjciIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDEwIDIiIGZpbGw9IiNmZjAwZmYiPgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMiIvPgo8L3N2Zz4KPHN2ZyB4PSIxNiIgeT0iMTUiIHdpZHRoPSI3IiBoZWlnaHQ9IjIiIHZpZXdCb3g9IjAgMCAxMCAyIiBmaWxsPSIjZmYwMGZmIj4KPHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIiLz4KPC9zdmc+CjxyZWN0IHg9IjgiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iNCIgZmlsbD0iIzgwODA4MCIvPgo8L3N2Zz4KPC9zdmc+">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            font-family: 'Share Tech Mono', monospace;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(0, 120, 255, 0.1) 100%);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .header h1 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            color: #00ffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #88aacc;
+            margin-bottom: 30px;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .demo-card {
+            background: rgba(0, 20, 40, 0.8);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00ffff, transparent);
+            transition: left 0.5s ease;
+        }
+
+        .demo-card:hover::before {
+            left: 100%;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 255, 255, 0.6);
+            box-shadow: 0 15px 30px rgba(0, 255, 255, 0.2);
+        }
+
+        .demo-card h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            color: #00aaff;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .demo-card h3 i {
+            color: #00ffff;
+        }
+
+        .demo-card p {
+            color: #88aacc;
+            margin-bottom: 20px;
+        }
+
+        .demo-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, rgba(0, 120, 255, 0.8), rgba(0, 200, 255, 0.8));
+            border: 1px solid rgba(0, 255, 255, 0.5);
+            border-radius: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Orbitron', monospace;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .demo-button:hover {
+            background: linear-gradient(135deg, rgba(0, 150, 255, 1), rgba(0, 255, 255, 1));
+            box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .features-list {
+            background: rgba(0, 20, 40, 0.6);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+
+        .features-list h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            color: #00ffff;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(0, 40, 80, 0.3);
+            border-radius: 10px;
+            border-left: 3px solid #00ffff;
+        }
+
+        .feature-item i {
+            color: #00ffff;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .feature-content h4 {
+            color: #00aaff;
+            margin-bottom: 5px;
+            font-family: 'Orbitron', monospace;
+        }
+
+        .feature-content p {
+            color: #88aacc;
+            font-size: 0.9rem;
+        }
+
+        .tech-stack {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .tech-stack h2 {
+            font-family: 'Orbitron', monospace;
+            font-size: 2rem;
+            color: #00ffff;
+            margin-bottom: 25px;
+        }
+
+        .tech-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .tech-icon {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: rgba(0, 20, 40, 0.8);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            min-width: 100px;
+        }
+
+        .tech-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+        }
+
+        .tech-icon i {
+            font-size: 2rem;
+            color: #00ffff;
+            margin-bottom: 10px;
+        }
+
+        .tech-icon span {
+            color: #88aacc;
+            font-size: 0.9rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid rgba(0, 255, 255, 0.3);
+        }
+
+        .footer p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: #00aaff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #00ffff;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🚀 NEXUS 3D Gaming Login</h1>
+            <p>Advanced Authentication System with Robot Assistant & Space Environment</p>
+            <div class="tech-icons">
+                <div class="tech-icon">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-cube"></i>
+                    <span>3D Effects</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Demo Cards -->
+        <div class="demo-grid">
+            <div class="demo-card">
+                <h3><i class="fas fa-sign-in-alt"></i> Login Page</h3>
+                <p>Halaman login utama dengan robot assistant yang interaktif, animasi 3D luar angkasa, dan paper interface yang mengambang.</p>
+                <a href="index.html" class="demo-button" target="_blank">
+                    <i class="fas fa-rocket"></i> Launch Login
+                </a>
+            </div>
+
+            <div class="demo-card">
+                <h3><i class="fas fa-user-plus"></i> Registration</h3>
+                <p>Sistem registrasi multi-step dengan progress indicator, validasi real-time, dan password strength meter.</p>
+                <a href="register.html" class="demo-button" target="_blank">
+                    <i class="fas fa-user-plus"></i> Try Register
+                </a>
+            </div>
+
+            <div class="demo-card">
+                <h3><i class="fas fa-key"></i> Password Recovery</h3>
+                <p>Sistem pemulihan password dengan verifikasi email, 6-digit code input, dan countdown timer.</p>
+                <a href="forgot-password.html" class="demo-button" target="_blank">
+                    <i class="fas fa-unlock-alt"></i> Test Recovery
+                </a>
+            </div>
+
+            <div class="demo-card">
+                <h3><i class="fas fa-mobile-alt"></i> PWA Support</h3>
+                <p>Progressive Web App dengan manifest.json, service worker, dan support untuk instalasi di mobile device.</p>
+                <a href="manifest.json" class="demo-button" target="_blank">
+                    <i class="fas fa-download"></i> View Manifest
+                </a>
+            </div>
+        </div>
+
+        <!-- Features List -->
+        <div class="features-list">
+            <h2>✨ Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-robot"></i>
+                    <div class="feature-content">
+                        <h4>Interactive Robot Assistant</h4>
+                        <p>Robot head dengan eye tracking, voice synthesis, dan smart responses sesuai konteks halaman.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-rocket"></i>
+                    <div class="feature-content">
+                        <h4>3D Space Environment</h4>
+                        <p>Animasi roket, starfield background, planet earth, dan space debris dengan efek parallax.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-layer-group"></i>
+                    <div class="feature-content">
+                        <h4>Multi-Page System</h4>
+                        <p>Tiga halaman terintegrasi: Login, Register, dan Forgot Password dengan transisi yang smooth.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <div class="feature-content">
+                        <h4>Real-time Validation</h4>
+                        <p>Validasi form secara real-time dengan feedback visual dan error messages yang informatif.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <div class="feature-content">
+                        <h4>Password Security</h4>
+                        <p>Password strength meter, requirements checker, dan match validation untuk keamanan maksimal.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div class="feature-content">
+                        <h4>Responsive Design</h4>
+                        <p>Design yang responsif dan optimal di semua ukuran layar dari desktop hingga mobile.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-volume-up"></i>
+                    <div class="feature-content">
+                        <h4>Voice Synthesis</h4>
+                        <p>Robot assistant yang dapat berbicara dengan Web Speech API untuk pengalaman yang immersive.</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <i class="fas fa-magic"></i>
+                    <div class="feature-content">
+                        <h4>Advanced Animations</h4>
+                        <p>CSS3 animations, 3D transforms, particle effects, dan floating physics untuk visual yang memukau.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="tech-stack">
+            <h2>🛠️ Technology Stack</h2>
+            <div class="tech-icons">
+                <div class="tech-icon">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript ES6</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-cube"></i>
+                    <span>3D Transforms</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-paint-brush"></i>
+                    <span>CSS Animations</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-volume-up"></i>
+                    <span>Web Speech API</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>PWA</span>
+                </div>
+                <div class="tech-icon">
+                    <i class="fas fa-font"></i>
+                    <span>Google Fonts</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2024 NEXUS 3D Gaming Login System</p>
+            <p>Created with ❤️ using modern web technologies</p>
+            <div class="social-links">
+                <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" title="Portfolio"><i class="fas fa-globe"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive effects
+        document.querySelectorAll('.demo-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) rotateY(5deg)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) rotateY(0)';
+            });
+        });
+
+        // Animate tech icons on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.tech-icon, .feature-item').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add CSS animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

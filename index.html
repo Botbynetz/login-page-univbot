@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS 3D Gaming Login</title>
+    <meta name="description" content="Advanced 3D Gaming Login with Rocket & Astronaut Animation">
+    <meta name="theme-color" content="#00ffff">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiMwMDBmZmYiLz4KPHN2ZyB4PSI4IiB5PSI4IiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmYiPgo8cGF0aCBkPSJNNy43NSA5SDIuMjVMMTAgMloiLz4KPHN2ZyB4PSIxNiIgeT0iNyIgd2lkdGg9IjciIGhlaWdodD0iMiIgdmlld0JveD0iMCAwIDEwIDIiIGZpbGw9IiNmZjAwZmYiPgo8cmVjdCB3aWR0aD0iMTAiIGhlaWdodD0iMiIvPgo8L3N2Zz4KPHN2ZyB4PSIxNiIgeT0iMTUiIHdpZHRoPSI3IiBoZWlnaHQ9IjIiIHZpZXdCb3g9IjAgMCAxMCAyIiBmaWxsPSIjZmYwMGZmIj4KPHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjIiLz4KPC9zdmc+CjxyZWN0IHg9IjgiIHk9IjE2IiB3aWR0aD0iMTYiIGhlaWdodD0iNCIgZmlsbD0iIzgwODA4MCIvPgo8L3N2Zz4KPC9zdmc+">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main 3D Scene Container -->
+    <div class="nexus-3d-scene" id="nexus3d">
+        
+        <!-- Starfield Background -->
+        <div class="starfield-3d">
+            <div class="stars-near"></div>
+            <div class="stars-mid"></div>
+            <div class="stars-far"></div>
+            <div class="nebula-glow"></div>
+        </div>
+        
+        <!-- 3D Space Environment -->
+        <div class="space-environment-3d">
+            <div class="planet-earth-3d">
+                <div class="earth-surface"></div>
+                <div class="earth-atmosphere"></div>
+                <div class="earth-clouds"></div>
+            </div>
+            <div class="space-debris"></div>
+        </div>
+        
+        <!-- 3D Rocket with True Depth -->
+        <div class="rocket-3d-container" id="rocket3dContainer">
+            <div class="rocket-3d" id="rocket3d">
+                <div class="rocket-hull">
+                    <div class="hull-main"></div>
+                    <div class="hull-nose-cone"></div>
+                    <div class="hull-windows">
+                        <div class="window main-window"></div>
+                        <div class="window side-window"></div>
+                    </div>
+                </div>
+                <div class="rocket-wings">
+                    <div class="wing wing-left"></div>
+                    <div class="wing wing-right"></div>
+                    <div class="wing wing-bottom"></div>
+                </div>
+                <div class="rocket-engines">
+                    <div class="engine main-engine">
+                        <div class="engine-nozzle"></div>
+                        <div class="engine-flame"></div>
+                    </div>
+                    <div class="engine side-engine left">
+                        <div class="engine-flame"></div>
+                    </div>
+                    <div class="engine side-engine right">
+                        <div class="engine-flame"></div>
+                    </div>
+                </div>
+                <div class="rocket-exhaust">
+                    <div class="exhaust-trail"></div>
+                    <div class="exhaust-particles"></div>
+                </div>
+            </div>
+            
+            <!-- Hatch Opening Animation -->
+            <div class="rocket-hatch" id="rocketHatch">
+                <div class="hatch-door"></div>
+                <div class="hatch-mechanism"></div>
+            </div>
+        </div>
+        
+        <!-- Tractor Beam Effect -->
+        <div class="tractor-beam-3d" id="tractorBeam3d">
+            <div class="beam-core"></div>
+            <div class="beam-particles"></div>
+            <div class="beam-energy-waves"></div>
+        </div>
+        
+        <!-- 3D Astronaut Character -->
+        <div class="astronaut-3d-container" id="astronaut3dContainer">
+            <div class="astronaut-3d" id="astronaut3d">
+                <!-- Helmet with Realistic Reflections -->
+                <div class="astronaut-helmet" id="astronautHelmet">
+                    <div class="helmet-sphere">
+                        <div class="helmet-tech-panel">
+                            <div class="tech-light"></div>
+                            <div class="tech-light"></div>
+                            <div class="tech-light"></div>
+                        </div>
+                        <div class="helmet-ventilation">
+                            <div class="vent-line"></div>
+                            <div class="vent-line"></div>
+                            <div class="vent-line"></div>
+                        </div>
+                        <div class="helmet-glass" id="helmetGlass">
+                            <div class="hud-overlay">
+                                <div class="hud-element top-left">
+                                    <div class="hud-text">SYS OK</div>
+                                </div>
+                                <div class="hud-element top-right">
+                                    <div class="hud-text">O2: 98%</div>
+                                </div>
+                                <div class="hud-crosshair">
+                                    <div class="crosshair-line horizontal"></div>
+                                    <div class="crosshair-line vertical"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Astronaut Face & Eyes -->
+                        <div class="astronaut-face" id="astronautFace">
+                            <!-- Eyebrows -->
+                            <div class="eyebrow left-eyebrow"></div>
+                            <div class="eyebrow right-eyebrow"></div>
+                            <div class="eye-container left-eye-container">
+                                <div class="eye" id="leftEye">
+                                    <div class="eyeball">
+                                        <div class="pupil"></div>
+                                        <div class="iris"></div>
+                                    </div>
+                                    <div class="eyelid top-eyelid" id="leftTopEyelid">
+                                        <div class="eyelashes upper-lashes">
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                        </div>
+                                    </div>
+                                    <div class="eyelid bottom-eyelid" id="leftBottomEyelid">
+                                        <div class="eyelashes lower-lashes">
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eye-container right-eye-container">
+                                <div class="eye" id="rightEye">
+                                    <div class="eyeball">
+                                        <div class="pupil"></div>
+                                        <div class="iris"></div>
+                                    </div>
+                                    <div class="eyelid top-eyelid" id="rightTopEyelid">
+                                        <div class="eyelashes upper-lashes">
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                        </div>
+                                    </div>
+                                    <div class="eyelid bottom-eyelid" id="rightBottomEyelid">
+                                        <div class="eyelashes lower-lashes">
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                            <div class="lash"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="mouth"></div>
+                        </div>
+                        
+                        <!-- Speech Bubble for Password Reminder -->
+                        <div class="speech-bubble" id="speechBubble">
+                            <div class="bubble-content">
+                                <p>Please create a strong password and remember your password</p>
+                            </div>
+                            <div class="bubble-tail"></div>
+                        </div>
+                        
+                        <div class="helmet-reflection"></div>
+                        <div class="helmet-glare"></div>
+                        <div class="helmet-privacy-cover" id="privacyCover"></div>
+                    </div>
+                    <div class="helmet-collar"></div>
+                    <div class="helmet-tubes">
+                        <div class="tube left"></div>
+                        <div class="tube right"></div>
+                    </div>
+                </div></div>
+                
+                <!-- Body with Realistic Proportions -->
+                <div class="astronaut-body">
+                    <div class="body-torso">
+                        <div class="chest-panel">
+                            <div class="panel-display"></div>
+                            <div class="panel-buttons">
+                                <div class="button"></div>
+                                <div class="button"></div>
+                                <div class="button"></div>
+                            </div>
+                        </div>
+                        <div class="life-support-unit"></div>
+                    </div>
+                    
+                    <!-- Arms with Throwing Animation -->
+                    <div class="astronaut-arms">
+                        <div class="arm arm-left">
+                            <div class="shoulder-joint"></div>
+                            <div class="upper-arm"></div>
+                            <div class="elbow-joint"></div>
+                            <div class="forearm"></div>
+                            <div class="hand"></div>
+                        </div>
+                        <div class="arm arm-right throwing-arm" id="throwingArm">
+                            <div class="shoulder-joint"></div>
+                            <div class="upper-arm"></div>
+                            <div class="elbow-joint"></div>
+                            <div class="forearm"></div>
+                            <div class="hand throwing-hand">
+                                <div class="fingers"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Legs for Stability -->
+                    <div class="astronaut-legs">
+                        <div class="leg leg-left">
+                            <div class="thigh"></div>
+                            <div class="knee-joint"></div>
+                            <div class="shin"></div>
+                            <div class="boot"></div>
+                        </div>
+                        <div class="leg leg-right">
+                            <div class="thigh"></div>
+                            <div class="knee-joint"></div>
+                            <div class="shin"></div>
+                            <div class="boot"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jetpack with Thruster Effects -->
+                <div class="astronaut-jetpack">
+                    <div class="jetpack-main">
+                        <div class="fuel-tank left"></div>
+                        <div class="fuel-tank right"></div>
+                        <div class="control-unit"></div>
+                    </div>
+                    <div class="jetpack-thrusters">
+                        <div class="thruster thruster-left">
+                            <div class="nozzle"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="thruster thruster-right">
+                            <div class="nozzle"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="thruster thruster-main">
+                            <div class="nozzle"></div>
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 3D Login Paper with Physics -->
+        <div class="login-paper-3d-container" id="loginPaper3dContainer">
+            <div class="login-paper-3d" id="loginPaper3d">
+                <div class="paper-physics-wrapper">
+                    <!-- Paper Front Side - Login Interface -->
+                    <div class="paper-face paper-front">
+                        <div class="paper-surface">
+                            <!-- Header with Holographic Effect -->
+                            <div class="nexus-header">
+                                <div class="nexus-logo-3d" id="logoRobotHead">
+                                    <!-- Robot Head Logo with Interactive Features -->
+                                    <div class="logo-robot-container">
+                                        <!-- Robot Head Shell -->
+                                        <div class="logo-robot-head">
+                                            <!-- Robot Eyes -->
+                                            <div class="logo-robot-eyes">
+                                                <div class="logo-robot-eye left-eye">
+                                                    <div class="logo-eye-socket"></div>
+                                                    <div class="logo-eye-pupil" id="logoLeftPupil"></div>
+                                                    <div class="logo-eye-glow"></div>
+                                                </div>
+                                                <div class="logo-robot-eye right-eye">
+                                                    <div class="logo-eye-socket"></div>
+                                                    <div class="logo-eye-pupil" id="logoRightPupil"></div>
+                                                    <div class="logo-eye-glow"></div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Robot Mouth/Speaker -->
+                                            <div class="logo-robot-mouth">
+                                                <div class="logo-mouth-speaker">
+                                                    <div class="logo-speaker-grid"></div>
+                                                    <div class="logo-sound-waves" id="logoSoundWaves">
+                                                        <div class="logo-sound-wave"></div>
+                                                        <div class="logo-sound-wave"></div>
+                                                        <div class="logo-sound-wave"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <!-- Antenna Signal -->
+                                            <div class="logo-antenna">
+                                                <div class="logo-antenna-signal">
+                                                    <div class="logo-signal-wave signal-1"></div>
+                                                    <div class="logo-signal-wave signal-2"></div>
+                                                    <div class="logo-signal-wave signal-3"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Interactive Speech Bubble -->
+                                        <div class="logo-speech-bubble" id="logoSpeechBubble">
+                                            <div class="logo-speech-content" id="logoSpeechContent">
+                                                Welcome to NEXUS! Click me to start.
+                                            </div>
+                                            <div class="logo-speech-pointer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="nexus-title">UNIVAI CREATION</h1>
+                                <h2 class="access-subtitle">ACCESS TERMINAL</h2>
+                                <div class="header-line"></div>
+                            </div>
+                            
+                            <!-- Login Form with 3D Elements -->
+                            <div class="login-interface-3d">
+                                <div class="form-field-3d">
+                                    <div class="field-label">USERNAME</div>
+                                    <div class="field-container">
+                                        <div class="field-icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <input type="text" id="username" class="field-input-3d" placeholder="Enter your username">
+                                        <div class="field-border-3d"></div>
+                                        <div class="field-glow"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-field-3d">
+                                    <div class="field-label">PASSWORD</div>
+                                    <div class="field-container">
+                                        <div class="field-icon">
+                                            <i class="fas fa-lock"></i>
+                                        </div>
+                                        <input type="password" id="password" class="field-input-3d" placeholder="Enter your password">
+                                        <div class="field-border-3d"></div>
+                                        <div class="field-glow"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="action-buttons-3d">
+                                    <button class="nexus-button-3d primary-button" id="loginBtn">
+                                        <div class="button-surface">
+                                            <div class="button-content">
+                                                <i class="fas fa-sign-in-alt"></i>
+                                                <span>LOGIN</span>
+                                            </div>
+                                            <div class="button-glow-effect"></div>
+                                            <div class="button-hologram"></div>
+                                        </div>
+                                    </button>
+                                    
+                                    <button class="nexus-button-3d secondary-button" id="registerBtn">
+                                        <div class="button-surface">
+                                            <div class="button-content">
+                                                <i class="fas fa-user-plus"></i>
+                                                <span>REGISTER</span>
+                                            </div>
+                                            <div class="button-glow-effect"></div>
+                                        </div>
+                                    </button>
+                                    
+                                    <button class="nexus-button-3d forgot-button" id="forgotPasswordBtn">
+                                        <div class="button-surface">
+                                            <div class="button-content">
+                                                <i class="fas fa-key"></i>
+                                                <span>FORGOT PASSWORD</span>
+                                            </div>
+                                            <div class="button-glow-effect"></div>
+                                            <div class="button-hologram"></div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- System Status Display -->
+                            <div class="system-status-3d">
+                                <div class="status-line">
+                                    <span class="status-label">SYSTEM:</span>
+                                    <span class="status-value ready" id="systemStatusValue">READY</span>
+                                </div>
+                                <div class="status-line">
+                                    <span class="status-label">CLEARANCE:</span>
+                                    <span class="status-value pending" id="clearanceStatusValue">PENDING</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Paper Back Side - System Configuration -->
+                    <div class="paper-face paper-back">
+                        <div class="paper-surface">
+                            <!-- Header -->
+                            <div class="nexus-header">
+                                <div class="nexus-logo-3d">
+                                    <div class="logo-outer-ring"></div>
+                                    <div class="logo-inner-ring"></div>
+                                    <div class="logo-core">
+                                        <i class="fas fa-satellite-dish"></i>
+                                        <div class="logo-particles">
+                                            <div class="particle"></div>
+                                            <div class="particle"></div>
+                                            <div class="particle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h1 class="nexus-title">SYSTEM CONFIG</h1>
+                                <h2 class="access-subtitle">RECOVERY PROTOCOL</h2>
+                                <div class="header-line"></div>
+                            </div>
+                            
+                            <!-- Recovery Form -->
+                            <div class="recovery-interface-3d">
+                                <div class="form-field-3d">
+                                    <div class="field-label">RECOVERY BEACON</div>
+                                    <div class="field-container">
+                                        <div class="field-icon">
+                                            <i class="fas fa-satellite"></i>
+                                        </div>
+                                        <input type="email" id="recoveryBeacon" class="field-input-3d" placeholder="Emergency contact frequency">
+                                        <div class="field-border-3d"></div>
+                                        <div class="field-glow"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-field-3d">
+                                    <div class="field-label">SECURITY CIPHER</div>
+                                    <div class="field-container">
+                                        <div class="field-icon">
+                                            <i class="fas fa-key"></i>
+                                        </div>
+                                        <input type="text" id="securityCipher" class="field-input-3d" placeholder="Authentication cipher code">
+                                        <div class="field-border-3d"></div>
+                                        <div class="field-glow"></div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Recovery Actions -->
+                                <div class="action-buttons-3d">
+                                    <button class="nexus-button-3d primary-button" id="transmitRecoveryBtn">
+                                        <div class="button-surface">
+                                            <div class="button-content">
+                                                <i class="fas fa-broadcast-tower"></i>
+                                                <span>TRANSMIT SIGNAL</span>
+                                            </div>
+                                            <div class="button-glow-effect"></div>
+                                            <div class="button-hologram"></div>
+                                        </div>
+                                    </button>
+                                    
+                                    <button class="nexus-button-3d secondary-button" id="returnToAccessBtn">
+                                        <div class="button-surface">
+                                            <div class="button-content">
+                                                <i class="fas fa-arrow-rotate-left"></i>
+                                                <span>RETURN TO ACCESS</span>
+                                            </div>
+                                            <div class="button-glow-effect"></div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Recovery Status -->
+                            <div class="system-status-3d">
+                                <div class="status-line">
+                                    <span class="status-label">BEACON:</span>
+                                    <span class="status-value standby" id="beaconStatusValue">STANDBY</span>
+                                </div>
+                                <div class="status-line">
+                                    <span class="status-label">TRANSMISSION:</span>
+                                    <span class="status-value offline" id="transmissionStatusValue">OFFLINE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Success Launch Sequence -->
+        <div class="launch-success-3d" id="launchSuccess3d">
+            <div class="success-environment">
+                <div class="success-backdrop"></div>
+                <div class="warp-tunnel">
+                    <div class="tunnel-ring"></div>
+                    <div class="tunnel-ring"></div>
+                    <div class="tunnel-ring"></div>
+                    <div class="tunnel-ring"></div>
+                    <div class="tunnel-ring"></div>
+                </div>
+            </div>
+            
+            <div class="success-content-3d">
+                <div class="success-orb">
+                    <div class="orb-core"></div>
+                    <div class="orb-energy-rings">
+                        <div class="energy-ring ring-1"></div>
+                        <div class="energy-ring ring-2"></div>
+                        <div class="energy-ring ring-3"></div>
+                    </div>
+                    <div class="orb-particles"></div>
+                </div>
+                
+                <div class="success-text-3d">
+                    <h1 class="launch-title">LAUNCH AUTHORIZED</h1>
+                    <h2 class="welcome-subtitle">Welcome aboard, Commander</h2>
+                    <p class="system-message">UNIVAI Creation System Online</p>
+                    
+                    <div class="launch-countdown">
+                        <div class="countdown-item">
+                            <span class="countdown-number">3</span>
+                            <span class="countdown-label">ENGINES</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">2</span>
+                            <span class="countdown-label">BOOSTERS</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number">1</span>
+                            <span class="countdown-label">LIFTOFF</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- Audio System -->
+    <audio id="rocketEngineSound" preload="auto" loop>
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBTGH1/LNeSUFKXfH8N6QQgkUXrPp665VFAlFnt/yvmwhBTKG2O/NeSsFKHfH8N6QQgoUXrLo7K5WFAlEnt/yv2wiBD"; loop></source>
+    </audio>
+    
+    <audio id="successSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBTGH1/LNeSUFKXfH8N6QQgkUXrPp665VFAlFnt/yvmwhBTKG2O/NeSsFKHfH8N6QQgoUXrLo7K5WFAlEnt/yv2wiBD"; loop></source>
+    </audio>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
